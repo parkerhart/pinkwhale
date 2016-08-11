@@ -1,0 +1,87 @@
+body {
+  background-color: #c43f8c;
+  margin: 0;
+  overflow: hidden;
+}
+
+.wave-front {
+  background-color: #5cbfb0;
+  height: 100px;
+  width: 150%;
+  position: absolute;
+  bottom: 0;
+}
+.wave-front .waves {
+  width: calc(100% + 100px);
+  animation: wavy 3s ease-in-out infinite alternate;
+}
+
+.waves {
+  width: calc(100% + 100px);
+  height: 40px;
+  position: absolute;
+  top: -34px;
+  background: url("https://i.imgsafe.org/c44233cf19.png");
+  background-size: 100px;
+}
+
+.wave-back {
+  background-color: #4dacbf;
+  height: 100px;
+  width: 150%;
+  position: absolute;
+  bottom: 0;
+}
+.wave-back .waves {
+  background: url("https://i.imgsafe.org/c4444a67a2.png");
+  background-size: 100px;
+  background-position: 50px;
+  animation: wavy2 5s ease-in-out infinite alternate;
+}
+
+.wale {
+  width: 200px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -100px;
+  transform: rotate(3deg);
+  animation: bobbing 4s ease-in-out infinite;
+}
+
+@keyframes wavy {
+  0%, 100% {
+    margin-left: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+  25% {
+    margin-top: 2px;
+  }
+  50% {
+    margin-left: -20px;
+    width: 100%;
+    margin-top: 0;
+  }
+  75% {
+    margin-top: 2px;
+  }
+}
+@keyframes wavy2 {
+  0%, 100% {
+    margin-left: -30px;
+    width: 100%;
+  }
+  50% {
+    margin-left: -10px;
+    width: 100%;
+  }
+}
+@keyframes bobbing {
+  0% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+}
